@@ -10,7 +10,6 @@ import med.voll.api.endereco.DadosEndereco;
 public record DadosCadastroMedico(
         @NotBlank
         String nome,
-
         @Email
         @NotBlank
         String email,
