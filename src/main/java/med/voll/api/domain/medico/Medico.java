@@ -1,4 +1,4 @@
-package med.voll.api.medico;
+package med.voll.api.domain.medico;
 
 
 import jakarta.persistence.*;
@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Getter;
 import lombok.EqualsAndHashCode;
 import lombok.AllArgsConstructor;
-import med.voll.api.endereco.Endereco;
+import med.voll.api.domain.endereco.Endereco;
 
 @Entity(name = "medicos")
 @Table(name = "Medicos")
