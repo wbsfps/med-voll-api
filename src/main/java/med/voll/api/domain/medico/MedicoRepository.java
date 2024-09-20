@@ -13,7 +13,7 @@ public interface MedicoRepository extends JpaRepository<Medico, Long> {
     Page<Medico> findAllByAtivoTrue(Pageable pageable);
 
     @Query("""
-            select m from Medico m
+            select m from medicos m
             where
             m.ativo = true
             and
@@ -28,8 +28,8 @@ public interface MedicoRepository extends JpaRepository<Medico, Long> {
             )
             order by rand()
             limit 1
-""")
-    Medico escolherMedicoAleatorioLivreNaData(Especialidade especialidade, @NotNull @Future LocalDateTime data);
+        """)
+    Medico escolherMedicoAleatorioLivreNaData(Especialidade especialidade, LocalDateTime data);
 
     @Query("""
             select m.ativo
